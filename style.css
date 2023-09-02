@@ -1,0 +1,1058 @@
+/*MOBILE*/
+
+#landing-page {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+
+    /*Flex-wrap - grancho de linkagem*/
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    color: #FFFFFF;
+}
+
+#landing-page .home {
+    background-image: url(./Assets-cafe/home-mobile.svg);
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+
+/*HEADER*/
+#landing-page .home header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    
+    z-index: 10;
+    
+}
+
+#landing-page .home header nav {
+    margin-top: 0.4rem;
+}
+
+#landing-page .home header nav a {
+    font: 600 0.8rem 'Poppins';
+    text-decoration: none;
+    
+    color: #FFFFFF;
+    margin: 0 0.4rem;
+    
+}
+
+#landing-page .home header nav a:hover {
+    border-bottom: 4px solid #C67C23;
+    border-radius: 0.1rem;
+}
+
+#landing-page .home header a.style-menu {
+    color: #C67C23;
+    border-bottom: 3px solid #C67C23;
+    transition: all 110ms ease-in-out;
+}
+
+
+
+/*HOME*/
+#landing-page .home .home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5.8rem auto;
+}
+
+#landing-page .home .home-content h1 {
+    text-align: center;
+    border-bottom: 6px solid #C67C23;
+    max-width: 500px;
+    margin-top: 1.2rem;
+
+    animation-name: homeTitle;
+    animation-duration: 2s;
+}
+
+#landing-page .home .home-content p {
+    font: 600 1.1rem 'Poppins';
+    margin-top: 0.8rem;
+
+    animation-name: homeSlogan;
+    animation-duration: 2s;
+}
+
+
+
+/*ABOUT US*/
+
+#landing-page .about .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.4rem;
+}
+
+#landing-page .about .logo-container img {
+    width: 150px;
+}
+
+#landing-page .about .about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 2.8rem auto;
+}
+
+#landing-page .about .about-content h3 {
+    margin-bottom: 0.4rem;
+    font: 700 2.2rem 'Poppins';
+
+    animation-name: textAbout;
+    animation-duration: 2s;
+}
+
+#landing-page .about .about-content p {
+    padding: 0 1rem;
+    /*word break - quebra de informações de texto*/
+    word-break: normal;
+    font: 600 0.9rem 'Poppins';
+
+    animation-name: textAbout;
+    animation-duration: 2s;
+}
+
+/*p + p - Todo elemento p depois do p*/
+#landing-page .about .about-content p + p {
+    margin-top: 1.2rem;
+}
+
+
+
+/*Top Seller*/
+
+#landing-page .top-seller {
+    position: relative;
+    
+    /*máximo de distância do container*/
+    max-width: 23rem;
+    margin: 0 auto;
+}
+
+
+
+/*fim sliders*/
+
+#landing-page .top-seller .top-seller-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 1.4rem;
+}
+
+
+
+#landing-page .top-seller .top-seller-divider h3 {
+    font: 700 2.1rem 'Poppins';
+    padding: 0 0.3rem;
+}
+
+#landing-page .top-seller .drink {
+    display: flex;
+    background: var(--color-card);
+    margin: 2.2rem auto;
+    border-radius: 20px;
+    max-width: 90%;
+
+    /*Parar de espremer os container*/
+    flex-shrink: 0;    
+
+    opacity: 0.6;
+    
+}
+
+#landing-page .top-seller .drink:hover {
+    transform: scale(1.02);
+    transition: 0.3s;
+    box-shadow: 3px 3px 16px #252424;
+}
+
+#landing-page .top-seller .drink img {
+    width: 250px;
+    padding: 1.2rem;
+    border-radius: 50px;
+}
+
+#landing-page .top-seller .drink .drink-description {
+    padding-top: 2.1rem;
+
+}
+
+#landing-page .top-seller .drink .drink-description h4 {
+    color: var(--cor-destaque);
+    font: 600 0.8rem 'Poppins';
+    border-bottom: 3px solid #C67C23;
+    max-width: max-content;
+}
+
+#landing-page .top-seller .drink .drink-description p {
+    font: 400 0.8rem 'Poppins';
+    padding-top: 0.8rem;
+    padding-left: 0.2rem;
+}
+
+/*Sliders drink*/
+#landing-page .top-seller .slider-drinks-wrapper .slider-drinks, .slider-food-wrapper .slider-food {
+    display: flex;
+
+    /*evita a passagem de rolagem da página inteira*/
+    flex-flow: row nowrap;
+
+    /*margin e padding juntos*/
+    gap:0.8rem;
+}
+
+.slider-drinks-wrapper, .slider-food-wrapper {
+
+    /*Barra de rolagem*/
+    overflow-x: auto;
+}
+
+/*webkit de tirar barra de rolagem*/
+.slider-drinks-wrapper::-webkit-scrollbar, .slider-food-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.slider-drinks-wrapper button, .slider-food-wrapper button{
+    height: 320px;
+}
+
+/*styles arrow*/
+.arrow-left, .arrow-right {
+    /*relativa a um elemento*/
+    position: absolute;
+    top: 260px;
+    z-index: 8;
+
+
+    left: 0;
+    right: auto;
+    bottom: 0;
+
+    border: 0;
+
+    /*opacidade*/
+    opacity: 0.1;
+    background: transparent;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.arrow-right {
+    left: auto;
+    right: 0; 
+}
+
+.arrow-left:hover, .arrow-right:hover {
+    opacity: 1;
+}
+
+/* FIm slider Drink */
+
+
+
+
+
+#landing-page .top-seller .food {
+    background: var(--color-card);
+    display: flex;
+    justify-content: center;
+
+    border-radius: 20px;
+    margin: 2.2rem auto;
+    max-width: 90%;
+
+    opacity: 0.6;
+
+    /*Parar de espremer os container*/
+    flex-shrink: 0;    
+}
+
+
+#landing-page .top-seller .food:hover {
+    transform: scale(1.02);
+    transition: 0.3s;
+    box-shadow: 3px 3px 16px #252424;
+}
+
+#landing-page .top-seller .food img {
+    width: 240px;
+    padding: 1.2rem;
+    border-radius: 50px;
+}
+
+#landing-page .top-seller .food .food-description {
+    padding-top: 2.3rem;
+}
+
+#landing-page .top-seller .food .food-description h4 {
+    font: 600 0.8rem 'Poppins';
+    color: var(--cor-destaque);
+    border-bottom: 3px solid #C67C23;
+
+    max-width: max-content;
+    
+    
+}
+
+#landing-page .top-seller .food .food-description p {
+    font: 400 0.8rem 'Poppins';
+     
+    padding-top: 0.8rem;
+    padding-right: 0.8rem;
+}
+
+/* Slider food */
+.arrow-left-food, .arrow-right-food {
+    position: absolute;
+
+    top: 690px;
+    z-index: 8;
+
+    cursor: pointer;
+
+    left: 0;
+    right: auto;
+    bottom: 0;
+
+    border: 0;
+
+    /*opacidade*/
+    opacity: 0.1;
+    background: transparent;
+}
+
+.arrow-right-food {
+    left: auto;
+    right: 0; 
+}
+
+.arrow-left-food:hover, .arrow-right-food:hover {
+    opacity: 1;
+}
+
+/*Fim Slider food */
+
+
+
+#landing-page .top-seller .button-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.2rem 0;
+}
+
+#landing-page .top-seller .button-menu button {
+    width: 10rem;
+    height: 2.4rem;
+    border-radius: 1rem;
+    border-radius: 1rem;
+    border: 0;
+    
+    background: var(--cor-destaque);
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#landing-page .top-seller .button-menu button img {
+    width: 35px;
+    margin-left: 0.6rem;
+}
+
+#landing-page .top-seller .button-menu button:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+    box-shadow: 2px 2px 15px #585454;
+}
+
+
+/* Movies */
+#landing-page .top-seller .movie {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+    border-radius: 20px;
+    margin: 2rem auto;
+    /* min-width: 65%; */
+    width: 65%;
+   
+    background:var(--color-card) ;
+    
+    /*Parar de espremer os container*/
+    flex-shrink: 0;
+    opacity: 0.6;
+
+}
+
+#landing-page .top-seller .movie:hover {
+    transform: scale(1.02);
+    transition: 0.3s;
+    box-shadow: 1px 2px 20px #585454;
+}
+
+#landing-page .top-seller .movie img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+
+    width: 200px;  
+    
+    
+    border-radius: 20px;
+}
+
+#landing-page .top-seller .movie h4 {
+    font: 600 0.9rem 'Poppins';
+    color: var(--cor-destaque);
+    border-bottom: 3px solid #C67C23;
+}
+
+#landing-page .top-seller .movie p {
+    font: 400 0.8rem 'Poppins';
+    margin: 0.8rem 0;
+}
+
+
+/*SLIDER MOVIE*/
+#landing-page .top-seller .slider-movies-wrapper .slider-movies {
+    display: flex;
+
+    /*evita a passagem de rolagem da página inteira*/
+    flex-flow: row nowrap;
+
+    /*margin e padding juntos*/
+    gap:1rem;
+    
+}
+
+.slider-movies-wrapper{
+
+    /*Barra de rolagem*/
+    overflow-x: auto;
+}
+
+/*webkit de tirar barra de rolagem*/
+.slider-movies-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.slider-movies-wrapper button{
+    height: 320px;
+}
+
+/*styles arrow*/
+.arrow-left-movies, .arrow-right-movies {
+    /*relativa a um elemento*/
+    position: absolute;
+    top: 260px;
+    z-index: 8;
+
+    cursor: pointer;
+    
+    left: 0;
+    right: auto;
+    bottom: 0;
+
+    border: 0;
+
+    /*opacidade*/
+    opacity: 0.5;
+    background: transparent;
+}
+
+.arrow-right-movies {
+    left: auto;
+    right: 0; 
+}
+
+.arrow-left-movies:hover, .arrow-right-movies:hover {
+    opacity: 1;
+}
+
+/* Fim slider Movies */
+
+
+
+
+/* Maps */
+#landing-page .maps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2.8rem auto;
+}
+
+#landing-page .maps iframe {
+    width: 500px;
+    height: 400px;
+    border-radius: 1.6rem;
+    box-shadow: 2px 3px 16px #323030;
+
+}
+/*Fim Maps */
+
+
+
+
+/* Footer */
+#landing-page .footer {
+    margin: 2.2rem 0;
+    text-align: center;
+}
+
+#landing-page .footer .social-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#landing-page .footer .social-media p {
+    font: 500 0.9rem 'Poppins';
+}
+
+#landing-page .footer .social-media img {
+    width: 15px;
+    margin-left: 0.2rem;
+    display: flex;
+    align-items: center;
+}
+
+#landing-page .footer .informations {
+    text-align: center;
+}
+
+#landing-page .footer .informations .contact {
+    font: 500 1rem 'Poppins';
+    margin-top: 1rem;
+}
+
+#landing-page .footer .informations .contact p {
+    margin-top: 0.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#landing-page .footer .informations .contact img{
+    padding: 0;
+    margin: 0 0.2rem;
+    cursor: pointer;
+}
+
+#landing-page .footer .informations .address {
+    font: 500 1rem 'Poppins';
+    margin-top: 2rem;
+}
+
+#landing-page .footer .informations .address p {
+    margin-top: 0.6rem;
+}
+
+#landing-page .footer img {
+    margin: 1.2rem auto;
+}
+
+#landing-page .footer p {
+    font: 500 0.8rem 'Poppins';
+}
+
+/* Fim Footer */
+
+
+
+/* Opacidade Elementos */
+
+
+#landing-page .top-seller .slider-drinks-wrapper .slider-drinks .current-drink {
+    opacity: 1;
+}
+
+#landing-page .top-seller .slider-food-wrapper .slider-food .current-food {
+    opacity: 1;
+}
+
+#landing-page .top-seller .slider-movies-wrapper .slider-movies .current-movie {
+    opacity: 1;
+}
+/*Fim Opacidade Elementos  */
+
+
+
+
+/* Tirar elementos */
+.img-header {
+    display: none;
+}
+
+.img-about {
+    display: none;
+}
+
+.buttons-home {
+    display: none;
+}
+/* Fim tirar elementos */
+
+.bg-header {
+    background: var(--cor-de-fundo);
+    
+}
+
+
+
+/* Responsividade celular - tablet */
+@media (min-width: 768px) {
+
+    /* Todo o elemento */
+    #landing-page {
+        max-width: 100%;
+        flex: 1;
+        
+    }
+
+    #landing-page .home {
+        background-image: url(./Assets-cafe/capa-bride-frankestain.svg);
+        width: 100vw;
+        height: 100vh;  
+    }
+
+    /* Header*/
+
+    #landing-page .home header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        position: fixed;
+        width: 100%;
+        
+        
+    }
+
+    #landing-page .home header nav a {
+        font: 600 0.8rem 'Poppins';
+        margin: 0 0.6rem;
+        
+    }
+
+    
+
+    .img-header {
+        display: inline;
+        width: 200px;
+    }
+
+    /* Home */
+    #landing-page .home .home-content {
+        max-width: 100%;
+
+        display: grid;
+        grid-template-rows: 450px 1fr; /*1FRAÇÃO É O RESTO DE NADA É TUDO*/
+
+        grid-template-columns: 1fr 1fr;
+
+        grid-template-areas: 
+        "img  title"
+        "none  text";
+
+        flex: 1;
+    }
+
+    #landing-page .home .home-content img {
+        width: 250px;
+        grid-area: img;
+        display: flex;
+        
+        justify-self: flex-end;
+        margin: 0 2rem;
+
+        animation-name: homeLogo;
+        animation-duration: 2s;
+    }
+
+    #landing-page .home .home-content h1 {
+        max-width: 700px;
+        
+        border-left: 5px solid #C67C23;
+        border-bottom: transparent;
+        text-align: left;
+        
+        font-size: 2rem;
+        padding: 0 1.2rem;
+        grid-area: title;
+        
+    }
+
+    #landing-page .home .home-content p {
+        font-size: 1rem;
+        grid-area: text;
+        margin: 0;
+    }
+
+
+
+    /* About */
+    #landing-page .about .about-content {
+        flex-flow: row;
+        flex-shrink: 0;
+        align-items: flex-start;
+        justify-content: center;
+        margin: 2.8rem auto;
+        padding: 0 4rem;
+    }
+
+    #landing-page .about .about-content .img-about {
+        display: none;
+        max-width: 25rem;
+    }
+    
+    #landing-page .about .about-content h3 {
+        font: 700 2.6rem 'Poppins';
+        
+    }
+
+    #landing-page .about .about-content p{
+        font: 600 0.8rem 'Poppins';
+        
+        padding: 0 2.2rem;
+        margin: 0;
+    }
+
+    /* Top Sellers */
+    
+    #landing-page .top-seller{
+        max-width: 90%;
+    }
+
+    #landing-page .top-seller .drink {
+        max-width: 500px;
+    }
+
+    
+
+    #landing-page .top-seller .food{
+        max-width: 500px;
+    }
+
+    #landing-page .top-seller .button-menu button {
+        transform: scale(1.2);
+    }
+
+    #landing-page .top-seller .movie {
+        max-width: 350px;
+        width: 500px;
+    }
+
+    /* Footer */
+
+    #landing-page .footer {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-rows: 100px 1fr;
+        grid-template-columns: 1fr 2fr 1fr ;
+        grid-template-areas: 
+        "social social logo "
+        "contact addres addres"
+        "p p p  ";
+
+        margin-top: 5rem;
+    }
+
+    #landing-page .footer .social-media{
+        grid-area: social;
+        justify-self: flex-start;
+        align-self: center ;
+        margin: 0 1.2rem;
+
+    }
+
+    #landing-page .footer .social-media p {
+        font: 500 0.7rem 'Poppins';
+    }
+
+    #landing-page .footer .social-media img {
+        width: 20px;
+    }
+
+    #landing-page .footer img {
+        grid-area: logo;
+        justify-self: flex-end;
+        align-self: center ;
+    }
+
+    #landing-page .footer .informations{
+        text-align: left;
+        padding-left: 1.2rem;
+    }
+
+    #landing-page .footer .informations .contact{
+        grid-area: contact;
+        
+    }
+
+    #landing-page .footer .informations .contact p {
+        justify-content: flex-start;
+    }
+
+    #landing-page .footer .informations .addrees {
+        grid-area: addres;
+        
+    }
+
+    #landing-page .footer p:last-of-type {
+        grid-area: p;
+
+        margin: 0.6rem auto;
+    }
+
+
+    /* Arrows Slider responsivos  */
+    .arrow-left-movies, .arrow-right-movies{
+        top: 220px;
+        
+    }
+    .arrow-left-food, .arrow-right-food{
+        top: 620px;
+        
+    }
+    
+    .arrow-left, .arrow-right{
+        top: 190px;
+        
+    }
+    /* Fim Arrows Slider responsivos  */
+
+}
+
+
+
+
+
+
+/* Responsividade desktop*/
+@media (min-width: 1440px) {
+    #landing-page .about .about-content .img-about {
+        display: inline;
+        max-width: 25rem;
+
+        animation-name: imgAbout;
+        animation-duration: 2s;
+    }
+    
+    #landing-page .about .about-content h3 {
+        font: 700 2.6rem 'Poppins';
+        
+    }
+
+    #landing-page .about .about-content p{
+        font: 600 0.9rem 'Poppins';
+        max-width: 820px;
+        padding: 0 5rem;
+        margin: 0;
+    }
+
+
+    #landing-page .home header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        
+    }
+
+    #landing-page .home header nav a {
+        font: 600 1rem 'Poppins';
+        margin: 0 1.4rem;
+    }
+
+    .img-header {
+        display: inline;
+    }
+
+    /* Home */
+    #landing-page .home .home-content {
+        max-width: 100%;
+        display: grid;
+        grid-template-rows: 450px 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "img  title"
+        "none  text";
+        flex: 1;
+    }
+
+    #landing-page .home .home-content img {
+        width: 350px;
+        grid-area: img;
+        display: flex;
+        justify-self: flex-end;
+        margin: 0 2rem;
+    }
+
+    #landing-page .home .home-content h1 {
+        max-width: 700px;
+        
+        border-left: 5px solid #C67C23;
+        border-bottom: transparent;
+        text-align: left;
+        
+        font-size: 3rem;
+        padding: 0 1.2rem;
+        grid-area: title;
+        
+    }
+
+    #landing-page .home .home-content p {
+        font-size: 1.2rem;
+        grid-area: text;
+        margin: 0;
+    }
+
+    #landing-page .home .buttons-home {
+        display: inline;
+        display: flex;
+        align-items: center;
+
+        margin: 0px 5.6rem;
+    }
+
+
+    #landing-page .home .buttons-home button:first-of-type {
+        background-color: #C67C23;
+        border: none;
+        width: 250px;
+        height: 100px;
+        border-radius: 6px;
+        font: 700 34px 'Poppins';
+        color: #0A0A0A;
+
+    }
+
+    #landing-page .home .buttons-home button {
+        background-color: #0e0d0d;
+        border: none;
+        width: 400px;
+        height: 100px;
+        border-radius: 6px;
+        font: 700 34px 'Poppins';
+        color: #ffffff;
+        text-align: center;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        box-shadow: 7px 8px 10px #0c0c0c;
+
+        margin-right: 40px;
+        cursor: pointer;
+    }
+
+    #landing-page .home .buttons-home button:hover {
+        transform: scale(0.94);
+        transition: 0.5s;
+    }
+
+
+
+    #landing-page .home .buttons-home button img {
+        padding-left: 1.2rem;
+        
+    }
+
+    #landing-page .about .logo-container img {
+        width: 200px;
+    }
+
+    #landing-page .maps iframe {
+        width: 900px;
+        height: 500px;
+        border-radius: 1.6rem;
+    }
+
+    #landing-page .footer .social-media p {
+        font: 500 1rem 'Poppins';
+    }
+
+  
+    
+}
+
+
+/* Animações */
+
+@keyframes homeTitle {
+    from{
+        transform: translate(300px, 10px);
+    }
+
+
+}
+
+@keyframes homeLogo {
+    from{
+        transform: translateX(-400px);
+    }
+
+    to{
+        transform: translateX(0);
+    }
+
+}
+
+@keyframes homeSlogan {
+    from{
+        transform: translateY(200px);
+    }
+
+    to{
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes textAbout {
+    from{
+        transform: translate(300px, 10px);
+    }
+
+
+
+}
+
+@keyframes imgAbout {
+    from{
+        transform: translateX(-200px);
+    }
+
+    to{
+        transform: translateX(0);
+    }
+
+}

@@ -1,0 +1,69 @@
+/*DINAMIZAR O ARQUIVO DO CÓDIGO*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+    font-size: 150%; 
+    --cor-destaque: #C67C23; 
+    --cor-de-fundo: #0A0A0A;
+    --color-card: rgba(217, 217, 217, 0.15);
+}
+
+
+html.body , #root {
+    height: 100vh;
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+}
+
+
+#root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body, input, button, textarea {
+    font: 700 1.2rem 'Poppins';
+
+}
+
+
+.container {
+    width: 90vw;
+    max-width: 700px;
+}
+
+span {
+    color: var(--cor-destaque);
+}
+
+
+hr {
+    width: 6.8rem;
+    border: 2px solid #C67C23;
+}
+
+
+
+@media (min-width: 1440px) {
+    hr {
+        width: 13rem;
+        border: 3px solid #C67C23;
+    }
+
+    
+   
+}
+
+@media (min-width: 350px) and (max-width: 700px) {
+    :root{
+        font-size: 100%;
+    }
+}
